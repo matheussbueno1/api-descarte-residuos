@@ -1,0 +1,31 @@
+### Listar pontos
+GET http://localhost:3000/points
+
+### Ver ponto pelo ID
+GET http://localhost:3000/points/6918a7d1ffe0febf2bdd5032
+
+### Criar usuário
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "João Silva",
+  "email": "joao@example.com"
+}
+
+### Registrar descarte
+POST http://localhost:3000/descartes
+Content-Type: application/json
+
+{
+  "userName": "Matheus Bueno",
+  "pointId": "6918a7d1ffe0febf2bdd5032",
+  "wasteType": "plástico",
+  "date": "2025-11-15T16:00:00.000Z"
+}
+
+### Listar descartes por ponto
+GET http://localhost:3000/descartes?pointId=6918a7d1ffe0febf2bdd5032
+
+### Relatório
+GET http://localhost:3000/relatorio
